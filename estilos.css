@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.1); /* Fondo semitransparente para el body */
+    z-index: -1;
+}
+
+header {
+    position: relative;
+    color: darkblue;
+    text-align: center;
+    padding: 50px 20px;
+    background: none; /* Quitamos el fondo aquí */
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('letras-transformed.jpeg') no-repeat center center/cover; /* Nueva imagen de fondo del header */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4em; /* Tamaño de letra aumentado */
+    margin-bottom: 20px; /* Separación */
+    font-family: 'Fredericka the Great', cursive; /* Tipografía FreeLine */
+}
+
+header p {
+    margin: 10px 0 20px;
+    font-size: 1.8em; /* Tamaño de letra aumentado */
+}
+
+nav {
+    background: #003366; /* Azul más oscuro */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle más profesionalidad */
+}
+
+nav .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distribuir elementos uniformemente */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s; /* Transición para el hover */
+    font-style: italic; /* Mantener cursiva */
+    font-weight: bold; /* Negrita */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente al hacer hover */
+    color: white;
+    text-decoration: underline; /* Subrayar al hacer hover */
+    transform: scale(1.5); /* Agrandar un poco al hacer hover */
+}
+
+.content {
+    padding: 20px;
+}
+
+section {
+    padding: 10px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid #ccc; /* Borde intermedio */
+    text-align: justify; /* Justificar texto */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section p, section ul {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.job, .education {
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000; /* Fondo negro */
+    color: white; /* Letras blancas */
+}
+
+footer p {
+    margin: 0;
+}
+
+.fa-envelope, .fa-phone, .fa-linkedin {
+    margin-right: 10px;
+}
